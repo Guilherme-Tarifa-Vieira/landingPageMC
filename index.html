@@ -13,7 +13,7 @@
 </html>
 <body>
   
-<header>
+<header  id="nav">
 <div class="container">
   <div class="title">
   <h1>News</h1>
@@ -53,27 +53,37 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, illo adipis
 <article>
   <img src="/src/components/img/news.png">
 </article>
-<div class="mouseScroll">
+<div class="mouseScroll" id="dicaScroll">
   <ion-icon name="chevron-down-circle-outline"  class="iconScroll"></ion-icon>
 </div>
 </div>
 </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 <script  type = "module"  src = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" ></script> 
 <script  nomodule  src = "https://unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>
+
+<script>
+const header = document.querySelector('#nav')
+const mouse = document.querySelector('#dicaScroll')
+const navHeight = header.offsetHeight
+window.addEventListener('scroll', function () {
+  if (window.scrollY >= navHeight) {
+    // scroll é maior que o header//
+    header.classList.add('scroll')
+
+    setTimeout(() => {
+      mouse.classList.add('scroll')
+    }, '200')
+  } else {
+    //menor q altura do header//
+    header.classList.remove('scroll')
+    setTimeout(() => {
+      mouse.classList.remove('scroll')
+    }, '300')
+  }
+})
+  </script>
 
 

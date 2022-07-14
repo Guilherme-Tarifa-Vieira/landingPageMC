@@ -1,4 +1,7 @@
 @media screen and (max-width: 760px) {
+  body {
+    overflow-y: scroll;
+  }
   header .container {
     flex-direction: column;
   }
@@ -18,14 +21,110 @@
     align-self: center;
   }
 
-  img {
-    display: none;
-  }
-
   ul {
     text-align: center;
   }
   .mouseScroll ion-icon {
     display: none;
+  }
+  aside {
+    margin-top: 0px;
+    align-items: center;
+  }
+  aside h2 {
+    font-size: 50px;
+    width: 460px;
+  }
+  aside p {
+    width: 460px;
+  }
+  article {
+    order: -1;
+  }
+  article img {
+    height: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1460px) and (min-width: 760px) {
+  aside {
+    align-items: center;
+  }
+  aside h2 {
+    width: 550px;
+  }
+  aside p {
+    margin-top: 30px;
+    width: 550px;
+  }
+  form {
+    margin-top: 30px;
+  }
+  form [type='submit'] {
+    align-self: center;
+  }
+  article {
+    order: -1;
+  }
+  article img {
+    margin: 0 auto;
+  }
+  main .container {
+    flex-direction: column;
+  }
+  body {
+    overflow-y: scroll;
+  }
+
+  .mouseScroll {
+    top: 600px;
+  }
+}
+
+@media screen and (max-width: 944px) {
+  .mouseScroll {
+    top: 645px;
+  }
+}
+
+@media screen and (max-width: 644px) {
+  article img {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 491px) {
+  article {
+    display: none;
+  }
+
+  aside h2 {
+    width: 350px;
+    font-size: 38px;
+  }
+  aside p {
+    width: 350px;
+  }
+  body {
+    overflow-y: scroll;
+  }
+  header .container {
+    flex-direction: row;
+  }
+
+  .navBar {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 791px) {
+  body {
+    overflow-y: scroll;
+  }
+  .mouseScroll {
+    display: none;
+  }
+  aside {
+    margin-bottom: 30px;
   }
 }
