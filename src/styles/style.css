@@ -5,22 +5,32 @@
 
 /* VARIAVEIS DE CORES */
 
+:root {
+  --primaria: #2a59e4;
+
+  --secundaria: #67d43c;
+}
+
 body {
   background: linear-gradient(
     125deg,
-    rgba(34, 34, 34, 1) 17%,
-    rgba(99, 99, 99, 1) 75%,
-    rgba(153, 156, 157, 1) 100%
+    rgb(61, 61, 61) 17%,
+    rgb(99, 99, 99) 50%,
+    rgb(150, 150, 150) 100%
   );
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 1920px;
-  min-height: 100vh;
+
   color: #fff;
   font-family: poppinsregular;
+  overflow: hidden;
 }
 
 /* HEADER */
+header .container {
+  min-height: 10vh;
+}
 .container {
   display: flex;
   justify-content: space-between;
@@ -28,10 +38,21 @@ body {
   width: 80%;
   margin-left: 10%;
 }
-main {
-  margin-top: 150px;
+
+#home {
+  min-height: 90vh;
+}
+main .container {
+  align-items: center;
 }
 
+.agora {
+  font-family: poppinsmedium;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--primaria);
+  border-bottom: 1px solid var(--primaria);
+}
 .navBar ul,
 a {
   text-decoration: none;
@@ -43,22 +64,28 @@ a {
 }
 a:nth-child(5) {
   padding: 7px 12px;
-  border: 2px solid rgb(132, 14, 201);
+  /* border: 2px solid rgb(132, 14, 201); */
+  border: 2px solid var(--primaria);
   border-radius: 15px;
-  transition: 1s;
+  transition: 0.85s;
 }
 a:nth-child(5):hover {
   color: #fff;
-  background-color: rgba(132, 14, 201);
+  background-color: var(--primaria);
 }
 a:hover {
-  color: rgb(132, 14, 201);
+  color: var(--primaria);
 }
 
 .title {
   line-height: 35px;
 }
 
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 h1 {
   font-weight: 800;
 }
@@ -71,7 +98,7 @@ h2 {
 }
 
 span {
-  color: rgb(132, 14, 201);
+  color: var(--primaria);
 }
 
 p {
@@ -79,10 +106,12 @@ p {
   line-height: 40px;
   max-width: 700px;
 }
-
+article {
+  display: flex;
+  align-self: center;
+}
 img {
-  animation: float 6s ease-in-out infinite;
-  transition: 1s;
+  height: 450px;
 }
 
 @keyframes float {
@@ -107,12 +136,15 @@ form [type='submit'] {
   font-size: 20px;
   height: 50px;
   width: 50%;
-  background-color: rgb(132, 14, 201);
+  background-color: var(--primaria);
   color: white;
   font-weight: bold;
+  transition: 0.85s;
 }
-form [type='submit'] {
+form [type='submit']:hover {
   cursor: pointer;
+  border: 2px solid var(--primaria);
+  background-color: transparent;
 }
 input {
   margin-top: 20px;
@@ -122,4 +154,22 @@ input {
   border: none;
   font-size: 15px;
   outline: none;
+}
+
+.mouseScroll {
+  position: absolute;
+  top: 860px;
+
+  margin-bottom: 1px;
+  right: 47.4%;
+  animation: float 6s ease-in-out infinite;
+  transition: 1s;
+  max-height: 55px;
+}
+
+.mouseScroll ion-icon {
+  color: var(--primaria);
+  height: 55px;
+  width: 55px;
+  visibility: visible;
 }

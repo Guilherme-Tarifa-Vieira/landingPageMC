@@ -25,4 +25,7 @@
   ul {
     text-align: center;
   }
+  .mouseScroll ion-icon {
+    display: none;
+  }
 }
